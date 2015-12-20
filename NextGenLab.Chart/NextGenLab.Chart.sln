@@ -1,0 +1,35 @@
+Microsoft Visual Studio Solution File, Format Version 9.00
+# Visual Studio 2005
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NextGenLab.Chart", "NextGenLab.Chart\NextGenLab.Chart.csproj", "{ADCA3EFF-085B-4132-BF39-22448A2F4B13}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tester", "Tester\Tester.csproj", "{D2CB5D28-6FF6-4A60-A31A-71BE48147CB2}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{74D52588-48B3-43AE-A45C-F964EB31C03B}"
+	ProjectSection(SolutionItems) = postProject
+		Bugs.txt = Bugs.txt
+		NextGenLab.Chart.vsd = NextGenLab.Chart.vsd
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Ngl.Release|Any CPU = Ngl.Release|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{ADCA3EFF-085B-4132-BF39-22448A2F4B13}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ADCA3EFF-085B-4132-BF39-22448A2F4B13}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ADCA3EFF-085B-4132-BF39-22448A2F4B13}.Ngl.Release|Any CPU.ActiveCfg = Ngl.Release|Any CPU
+		{ADCA3EFF-085B-4132-BF39-22448A2F4B13}.Ngl.Release|Any CPU.Build.0 = Ngl.Release|Any CPU
+		{ADCA3EFF-085B-4132-BF39-22448A2F4B13}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ADCA3EFF-085B-4132-BF39-22448A2F4B13}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D2CB5D28-6FF6-4A60-A31A-71BE48147CB2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D2CB5D28-6FF6-4A60-A31A-71BE48147CB2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D2CB5D28-6FF6-4A60-A31A-71BE48147CB2}.Ngl.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D2CB5D28-6FF6-4A60-A31A-71BE48147CB2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D2CB5D28-6FF6-4A60-A31A-71BE48147CB2}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

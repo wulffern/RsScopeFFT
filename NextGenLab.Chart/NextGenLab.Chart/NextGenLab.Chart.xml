@@ -1,0 +1,1444 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>NextGenLab.Chart</name>
+    </assembly>
+    <members>
+        <member name="F:NextGenLab.Chart.FormPostProcess.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:NextGenLab.Chart.FormPostProcess.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:NextGenLab.Chart.FormPostProcess.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="T:NextGenLab.Chart.ChartTypes.Cross">
+            <summary>
+            Summary description for DrawPoints.
+            </summary>
+        </member>
+        <member name="T:NextGenLab.Chart.DrawPlot">
+            <summary>
+            Draw Grid 
+            </summary>
+        </member>
+        <member name="T:NextGenLab.Chart.ChControl">
+            <summary>
+            Base class for Charting controls
+            </summary>
+        </member>
+        <member name="M:NextGenLab.Chart.ChControl.#ctor">
+            <summary>
+            constructor
+            </summary>
+        </member>
+        <member name="M:NextGenLab.Chart.ChControl.Paint(System.Drawing.Graphics)">
+            <summary>
+            Wrapps child in a graphics container and draws this in the correct place
+            </summary>
+            <param name="g"></param>
+        </member>
+        <member name="M:NextGenLab.Chart.ChControl.OnPaint(System.Drawing.Graphics)">
+            <summary>
+            Paint the chart control
+            </summary>
+            <param name="g"></param>
+        </member>
+        <member name="P:NextGenLab.Chart.ChControl.Location">
+            <summary>
+            Where'd u want it?
+            </summary>
+        </member>
+        <member name="P:NextGenLab.Chart.ChControl.Size">
+            <summary>
+            Wat size do ya want?
+            </summary>
+        </member>
+        <member name="P:NextGenLab.Chart.ChControl.Font">
+            <summary>
+            Duh
+            </summary>
+        </member>
+        <member name="P:NextGenLab.Chart.ChControl.ForeColor">
+            <summary>
+            Uuh, back color, no, foreground color
+            </summary>
+        </member>
+        <member name="P:NextGenLab.Chart.ChControl.BackColor">
+            <summary>
+            background color
+            </summary>
+        </member>
+        <member name="P:NextGenLab.Chart.ChControl.Width">
+            <summary>
+            Width, gets it from Size
+            </summary>
+        </member>
+        <member name="P:NextGenLab.Chart.ChControl.Height">
+            <summary>
+            Height, gets it from Size
+            </summary>
+        </member>
+        <member name="P:NextGenLab.Chart.ChControl.Children">
+            <summary>
+            Chart child controls
+            </summary>
+        </member>
+        <member name="P:NextGenLab.Chart.ChControl.Parent">
+            <summary>
+            Parent of this ChControl
+            </summary>
+        </member>
+        <member name="E:NextGenLab.Chart.ChControl.PrePaint">
+            <summary>
+            Called just before the control is painted
+            </summary>
+        </member>
+        <member name="E:NextGenLab.Chart.ChControl.PostPaint">
+            <summary>
+            Called just after the control is painted
+            </summary>
+        </member>
+        <member name="M:NextGenLab.Chart.DrawPlot.#ctor(System.Double[],System.Double[][],System.String[])">
+            <summary>
+            Constructor
+            </summary>
+            <param name="cd">Chart Data</param>
+        </member>
+        <member name="M:NextGenLab.Chart.DrawPlot.OnPaint(System.Drawing.Graphics)">
+            <summary>
+            Paint me
+            </summary>
+            <param name="g"></param>
+        </member>
+        <member name="P:NextGenLab.Chart.DrawPlot.RealPoints">
+            <summary>
+            Real world points
+            </summary>
+        </member>
+        <member name="P:NextGenLab.Chart.DrawPlot.ScreenPoints">
+            <summary>
+            Screen points
+            </summary>
+        </member>
+        <member name="M:NextGenLab.Chart.ChartTypes.Cross.#ctor(System.Double[],System.Double[][],System.String[])">
+            <summary>
+            Constructor
+            </summary>
+            <param name="cd">Chart Data</param>
+        </member>
+        <member name="M:NextGenLab.Chart.ChartTypes.Cross.OnPaint(System.Drawing.Graphics)">
+            <summary>
+            Paints the control
+            </summary>
+            <param name="g"></param>
+        </member>
+        <member name="T:NextGenLab.Chart.FormAdjAxis">
+            <summary>
+            Summary description for FormAdjXaxis.
+            </summary>
+        </member>
+        <member name="F:NextGenLab.Chart.FormAdjAxis.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:NextGenLab.Chart.FormAdjAxis.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+        </member>
+        <member name="M:NextGenLab.Chart.FormAdjAxis.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="T:NextGenLab.Chart.ChartControl">
+            <summary>
+            Wrapped Chart 
+            </summary>
+        </member>
+        <member name="F:NextGenLab.Chart.ChartControl.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:NextGenLab.Chart.ChartControl.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+        </member>
+        <member name="M:NextGenLab.Chart.ChartControl.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify 
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="M:NextGenLab.Chart.ChartControl.#ctor">
+            <summary>
+            Initialize with default values for ChartData
+            </summary>
+        </member>
+        <member name="M:NextGenLab.Chart.ChartControl.SetValues(System.Double[],System.Double[])">
+            <summary>
+            Set Chart value series
+            </summary>
+            <param name="x">xvalue series</param>
+            <param name="y">yvalue series</param>
+        </member>
+        <member name="M:NextGenLab.Chart.ChartControl.SetValues(System.Double[],System.Double[][])">
+            <summary>
+            Set Chart value series
+            </summary>
+            <param name="x">xvalue series</param>
+            <param name="y">yvalues series</param>
+        </member>
+        <member name="M:NextGenLab.Chart.ChartControl.SetValuesAutoScale(System.Double[],System.Double[])">
+            <summary>
+            Set Chart value series and autoscale Axis
+            </summary>
+            <param name="x">xvalue series</param>
+            <param name="y">yvalue series</param>
+        </member>
+        <member name="M:NextGenLab.Chart.ChartControl.SetValuesAutoScale(System.Double[],System.Double[][])">
+            <summary>
+            Set Chart value series and autoscale Axis
+            </summary>
+            <param name="x">xvalue series</param>
+            <param name="y">yvalues series</param>
+        </member>
+        <member name="M:NextGenLab.Chart.ChartControl.GetImage">
+            <summary>
+            Gets image of the Chart control
+            </summary>
+            <returns>image of chart control</returns>
+        </member>
+        <member name="M:NextGenLab.Chart.ChartControl.PaintMe(System.Drawing.Graphics)">
+            <summary>
+            Paints the graphics control on a Graphics surface
+            </summary>
+            <param name="g">Graphics surface</param>
+        </member>
+        <member name="M:NextGenLab.Chart.ChartControl.OnResize(System.EventArgs)">
+            <summary>
+            Makes sure that the control repaints when resized
+            </summary>
+            <param name="e"></param>
+        </member>
+        <member name="M:NextGenLab.Chart.ChartControl.OnInvalidated(System.Windows.Forms.InvalidateEventArgs)">
+            <summary>
+            Makes sure that the control repaints when invalidated
+            </summary>
+            <param name="e"></param>
+        </member>
+        <member name="M:NextGenLab.Chart.ChartControl.OnPaint(System.Windows.Forms.PaintEventArgs)">
+            <summary>
+            Paint the chart control
+            </summary>
+            <param name="e"></param>
+        </member>
+        <member name="M:NextGenLab.Chart.ChartControl.DoPaint(System.Drawing.Graphics)">
+            <summary>
+            Paints the chart
+            </summary>
+            <param name="g"></param>
+        </member>
+        <member name="M:NextGenLab.Chart.ChartControl.InitializeComponents(System.Drawing.Graphics)">
+            <summary>
+            Initialize the graph component, only called explicitly when the graph changes
+            </summary>
+        </member>
+        <member name="M:NextGenLab.Chart.ChartControl.DesignTimePaint">
+            <summary>
+            Control what happens during design time
+            </summary>
+        </member>
+        <member name="M:NextGenLab.Chart.ChartControl.GetParentLocation(NextGenLab.Chart.ChControl)">
+            <summary>
+            Recursivly find the location of a ChControl refered to top ChControl parent
+            </summary>
+            <param name="c"></param>
+            <returns></returns>
+        </member>
+        <member name="P:NextGenLab.Chart.ChartControl.ShowTitle">
+            <summary>
+            Show title in chart
+            </summary>
+        </member>
+        <member name="P:NextGenLab.Chart.ChartControl.ShowLegend">
+            <summary>
+            Show Legend in chart
+            </summary>
+        </member>
+        <member name="P:NextGenLab.Chart.ChartControl.GraphTransform">
+            <summary>
+            Gets the GraphMath object used to transform from (among other things) "real" to screen points
+            </summary>
+        </member>
+        <member name="P:NextGenLab.Chart.ChartControl.AxisTypeY">
+            <summary>
+            LIN or LOG
+            </summary>
+        </member>
+        <member name="P:NextGenLab.Chart.ChartControl.ChartType">
+            <summary>
+            Chart type
+            </summary>
+        </member>
+        <member name="P:NextGenLab.Chart.ChartControl.GridColor">
+            <summary>
+            Base color for grid
+            </summary>
+        </member>
+        <member name="P:NextGenLab.Chart.ChartControl.AxisRangeX">
+            <summary>
+            Range for X axis (Min, Max, Step)
+            </summary>
+        </member>
+        <member name="P:NextGenLab.Chart.ChartControl.AxisRangeY">
+            <summary>
+            Range for Y axis (Min, Max, Step)
+            </summary>
+        </member>
+        <member name="P:NextGenLab.Chart.ChartControl.ChartDataList">
+            <summary>
+            ChartData 
+            </summary>
+        </member>
+        <member name="P:NextGenLab.Chart.ChartControl.AutoScale">
+            <summary>
+            AutoScale the axis
+            </summary>
+        </member>
+        <member name="P:NextGenLab.Chart.ChartControl.CurveArea">
+            <summary>
+            Rectangle that where the curve is drawn (the grid bounries)
+            </summary>
+        </member>
+        <member name="T:NextGenLab.Chart.FileTypes.FtXnc">
+            <summary>
+            Summary description for FtXnc.
+            </summary>
+        </member>
+        <member name="T:NextGenLab.Chart.FileTypes.IChartFile">
+            <summary>
+            Summary description for IChartFile.
+            </summary>
+        </member>
+        <member name="T:NextGenLab.Chart.XmlPlotter">
+            <summary>
+            Summary description for LoWPlot.
+            </summary>
+        </member>
+        <member name="M:NextGenLab.Chart.XmlPlotter.#ctor">
+            <summary>
+            constructor
+            </summary>
+        </member>
+        <member name="M:NextGenLab.Chart.XmlPlotter.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="M:NextGenLab.Chart.XmlPlotter.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+        </member>
+        <member name="M:NextGenLab.Chart.XmlPlotter.GetImages">
+            <summary>
+            Returns images
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:NextGenLab.Chart.XmlPlotter.PlotXml(System.String)">
+            <summary>
+            Plots an xml
+            </summary>
+            <param name="xml"></param>
+            <returns></returns>
+        </member>
+        <member name="T:NextGenLab.Chart.FileTypes.FtXnmc">
+            <summary>
+            Summary description for FtXnmc.
+            </summary>
+        </member>
+        <member name="T:NextGenLab.Chart.FileTypes.FtText">
+            <summary>
+            Summary description for FtTabLimited.
+            </summary>
+        </member>
+        <member name="T:NextGenLab.Chart.Markers">
+            <summary>
+            Summary description for Markers.
+            </summary>
+        </member>
+        <member name="F:NextGenLab.Chart.Markers.components">
+            <summary> 
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:NextGenLab.Chart.Markers.Dispose(System.Boolean)">
+            <summary> 
+            Clean up any resources being used.
+            </summary>
+        </member>
+        <member name="M:NextGenLab.Chart.Markers.InitializeComponent">
+            <summary> 
+            Required method for Designer support - do not modify 
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="T:NextGenLab.Chart.FileTypes.FtBnmc">
+            <summary>
+            Summary description for FtBnc.
+            </summary>
+        </member>
+        <member name="T:NextGenLab.Chart.ChartTypes.Points">
+            <summary>
+            Summary description for DrawPoints.
+            </summary>
+        </member>
+        <member name="M:NextGenLab.Chart.ChartTypes.Points.#ctor(System.Double[],System.Double[][],System.String[])">
+            <summary>
+            Constructor
+            </summary>
+            <param name="cd">Chart Data</param>
+        </member>
+        <member name="M:NextGenLab.Chart.ChartTypes.Points.OnPaint(System.Drawing.Graphics)">
+            <summary>
+            Paints the control
+            </summary>
+            <param name="g"></param>
+        </member>
+        <member name="T:NextGenLab.Chart.FileTypes.FileFactory">
+            <summary>
+            Summary description for FileFactory.
+            </summary>
+        </member>
+        <member name="T:NextGenLab.Chart.DrawGrid">
+            <summary>
+            Draw Grid 
+            </summary>
+        </member>
+        <member name="M:NextGenLab.Chart.DrawGrid.#ctor(NextGenLab.Chart.ChartDataList)">
+            <summary>
+            Constructor
+            </summary>
+            <param name="cd">Chart Data</param>
+        </member>
+        <member name="M:NextGenLab.Chart.DrawGrid.OnPaint(System.Drawing.Graphics)">
+            <summary>
+            Paint me
+            </summary>
+            <param name="g"></param>
+        </member>
+        <member name="P:NextGenLab.Chart.DrawGrid.X">
+            <summary>
+            AxisData for X axis
+            </summary>
+        </member>
+        <member name="P:NextGenLab.Chart.DrawGrid.Y">
+            <summary>
+            AxisData for Y axis
+            </summary>
+        </member>
+        <member name="P:NextGenLab.Chart.DrawGrid.GridColor">
+            <summary>
+            Base color for grid lines
+            </summary>
+        </member>
+        <member name="P:NextGenLab.Chart.DrawGrid.XAxisType">
+            <summary>
+            Type for X axis
+            </summary>
+        </member>
+        <member name="P:NextGenLab.Chart.DrawGrid.YAxisType">
+            <summary>
+            Type for Y axis
+            </summary>
+        </member>
+        <member name="P:NextGenLab.Chart.DrawGrid.GraphTransform">
+            <summary>
+            GraphTransform contains functions needed to transform from
+            "real" values to graphics points
+            </summary>
+        </member>
+        <member name="F:NextGenLab.Chart.DockContainer.components">
+            <summary> 
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:NextGenLab.Chart.DockContainer.Dispose(System.Boolean)">
+            <summary> 
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:NextGenLab.Chart.DockContainer.InitializeComponent">
+            <summary> 
+            Required method for Designer support - do not modify 
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="F:NextGenLab.Chart.PropertiesControl.components">
+            <summary> 
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:NextGenLab.Chart.PropertiesControl.Dispose(System.Boolean)">
+            <summary> 
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:NextGenLab.Chart.PropertiesControl.InitializeComponent">
+            <summary> 
+            Required method for Designer support - do not modify 
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="T:NextGenLab.Chart.GraphMath">
+            <summary>
+            Support functions for drawing Chart
+            </summary>
+        </member>
+        <member name="M:NextGenLab.Chart.GraphMath.#ctor(System.Drawing.Size,NextGenLab.Chart.AxisData,NextGenLab.Chart.AxisData)">
+            <summary>
+            Create a GraphMath object. Used to transform from "real" values to
+            control points
+            </summary>
+            <param name="Size">Size of graphics object to draw on</param>
+            <param name="X">AxisData for X axis</param>
+            <param name="Y">AxisData for Y axis</param>
+        </member>
+        <member name="M:NextGenLab.Chart.GraphMath.TranslateX(System.Double)">
+            <summary>
+            Translate x value from "real" to screen value
+            </summary>
+            <param name="X">"real" x value</param>
+            <returns>control x value</returns>
+        </member>
+        <member name="M:NextGenLab.Chart.GraphMath.TranslateY(System.Double)">
+            <summary>
+            Translate y value from "real" to screen value
+            </summary>
+            <param name="Y">"real" y value</param>
+            <returns>control y value</returns>
+        </member>
+        <member name="M:NextGenLab.Chart.GraphMath.InvTranslateX(System.Double)">
+            <summary>
+            Translate x value from screen to real value
+            </summary>
+            <param name="X">"real" x value</param>
+            <returns>control x value</returns>
+        </member>
+        <member name="M:NextGenLab.Chart.GraphMath.InvTranslateY(System.Double)">
+            <summary>
+            Translate y value from screen to real value
+            </summary>
+            <param name="Y">"real" y value</param>
+            <returns>control y value</returns>
+        </member>
+        <member name="M:NextGenLab.Chart.GraphMath.Translate(System.Drawing.PointF[])">
+            <summary>
+            Translate a set of points from "real" to screen points
+            </summary>
+            <param name="points">"real" points</param>
+            <returns>control points</returns>
+        </member>
+        <member name="M:NextGenLab.Chart.GraphMath.LogX(System.Drawing.PointF[])">
+            <summary>
+            Transform points from linear X axis to logarhitmic X axis
+            </summary>
+            <param name="points">linear x axis points</param>
+            <returns>logarithmic x axis points</returns>
+        </member>
+        <member name="M:NextGenLab.Chart.GraphMath.LogY(System.Drawing.PointF[])">
+            <summary>
+            Transform points from linear Y axis to logarithmic axis
+            </summary>
+            <param name="points">linear y axis points</param>
+            <returns>logartihmic y axis points</returns>
+        </member>
+        <member name="M:NextGenLab.Chart.GraphMath.GetPrettyString(System.Double)">
+            <summary>
+            Calculates prefix of a number from yocto(1e-24) to yotta(1e24)
+            </summary>
+            <param name="axis_val_temp">Value to compute prefix of</param>
+            <returns>Pretty print string </returns>
+        </member>
+        <member name="M:NextGenLab.Chart.GraphMath.GetPostfix(System.Int32,System.String@,System.Double@)">
+            <summary>
+            Calculates prefix and denumerator of a power from yocto(1e-24) to yotta(1e24)
+            </summary>
+            <param name="axis_val_temp">Power</param>
+        </member>
+        <member name="M:NextGenLab.Chart.GraphMath.Power(System.Double)">
+            <summary>
+            Gets the power of a double
+            </summary>
+            <param name="val">double value</param>
+            <returns>power of the double</returns>
+        </member>
+        <member name="M:NextGenLab.Chart.GraphMath.MaxPower(System.Double,System.Double)">
+            <summary>
+            Gets the maximum power of two double values
+            </summary>
+            <param name="val1">double 1</param>
+            <param name="val2">double 2</param>
+            <returns>maximum power</returns>
+        </member>
+        <member name="M:NextGenLab.Chart.GraphMath.AxisScale(NextGenLab.Chart.AxisData)">
+            <summary>
+            Returns sensible max, min and step value for a certain max and min input
+            </summary>
+            <param name="ad">AxisData</param>
+            <returns>AxisData</returns>
+        </member>
+        <member name="M:NextGenLab.Chart.GraphMath.TransformLogX(System.Double[])">
+            <summary>
+            Get sensible max, min and step for logarithmic X axis
+            </summary>
+            <param name="f"></param>
+            <returns></returns>
+        </member>
+        <member name="M:NextGenLab.Chart.GraphMath.TransformLogY(System.Double[][])">
+            <summary>
+            Get sensible max, min and step for logarithmic Y axis
+            </summary>
+            <param name="f"></param>
+            <returns></returns>
+        </member>
+        <member name="M:NextGenLab.Chart.GraphMath.TransformLog(NextGenLab.Chart.AxisData,NextGenLab.Chart.AxisData)">
+            <summary>
+            Transform AxisData from linear axis to logarithmic axis
+            </summary>
+            <param name="ad">linear AxisData</param>
+            <param name="auto">logarithmic autoscaled axisdata</param>
+            <returns>logarithmic AxisData</returns>
+        </member>
+        <member name="M:NextGenLab.Chart.GraphMath.TransformF(System.Double[])">
+            <summary>
+            Transform double[] to float[]
+            </summary>
+            <param name="d">double array</param>
+            <returns>float array</returns>
+        </member>
+        <member name="M:NextGenLab.Chart.GraphMath.TransformF(System.Double[][])">
+            <summary>
+            Transform double[][] to float[][]
+            </summary>
+            <param name="d">double[][]</param>
+            <returns>float[][]</returns>
+        </member>
+        <member name="M:NextGenLab.Chart.GraphMath.Transform(System.Double[])">
+            <summary>
+            Get AxisData (Min, Max, Step) from double[] array
+            </summary>
+            <param name="f">double[] array</param>
+            <returns>AxisData</returns>
+        </member>
+        <member name="M:NextGenLab.Chart.GraphMath.Transform(System.Double[][])">
+            <summary>
+            Get AxisData (Min, Max, Step) from double[][] array
+            </summary>
+            <param name="f">double[][]</param>
+            <returns>AxisData</returns>
+        </member>
+        <member name="M:NextGenLab.Chart.GraphMath.TransformNoScale(System.Double[])">
+            <summary>
+            Get AxisData (Min, Max, Step) from double[] array but do not autoscale axisdata
+            </summary>
+            <param name="f">double[] array</param>
+            <returns>AxisData</returns>
+        </member>
+        <member name="M:NextGenLab.Chart.GraphMath.TransformNoScale(System.Double[][])">
+            <summary>
+            Get AxisData (Min, Max, Step) from double[][] array but do not autoscale
+            </summary>
+            <param name="f">double[][]</param>
+            <returns>AxisData</returns>
+        </member>
+        <member name="T:NextGenLab.Chart.Complex">
+            <summary>
+            Complex value
+            </summary>
+        </member>
+        <member name="T:NextGenLab.Chart.ChartData">
+            <summary>
+            Structure for defining data needed for Chart
+            </summary>
+        </member>
+        <member name="M:NextGenLab.Chart.ChartData.GetInstance">
+            <summary>
+            Get instance of ChartData with default values
+            </summary>
+            <returns>ChartDate with default values</returns>
+        </member>
+        <member name="M:NextGenLab.Chart.ChartData.GetAutoScaleInstance(System.Double[],System.Double[][])">
+            <summary>
+            Generate ChartData with default values. Autoscale axisrange for X and Y 
+            arrays
+            </summary>
+            <param name="x">xvalue series</param>
+            <param name="y">yvalues series</param>
+            <returns>ChartData</returns>
+        </member>
+        <member name="M:NextGenLab.Chart.ChartData.ToXML(System.IO.Stream)">
+            <summary>
+            Convert to XML
+            </summary>
+            <param name="s"></param>
+        </member>
+        <member name="M:NextGenLab.Chart.ChartData.FromXml(System.IO.Stream)">
+            <summary>
+            Import from XML
+            </summary>
+            <param name="s"></param>
+            <returns></returns>
+        </member>
+        <member name="M:NextGenLab.Chart.ChartData.FromXml(System.Xml.XmlReader)">
+            <summary>
+            Import from XML
+            </summary>
+            <param name="s"></param>
+            <returns></returns>
+        </member>
+        <member name="M:NextGenLab.Chart.ChartData.ToHtml(System.IO.Stream)">
+            <summary>
+            Convert to HTML
+            </summary>
+            <param name="s"></param>
+        </member>
+        <member name="P:NextGenLab.Chart.ChartData.X">
+            <summary>
+            Xvalue series
+            </summary>
+        </member>
+        <member name="P:NextGenLab.Chart.ChartData.Y">
+            <summary>
+            Yvalues series
+            </summary>
+        </member>
+        <member name="P:NextGenLab.Chart.ChartData.AxisRangeX">
+            <summary>
+            Max, Min and Step values for X grid
+            </summary>
+        </member>
+        <member name="P:NextGenLab.Chart.ChartData.AxisRangeY">
+            <summary>
+            Max, Min and Step values for Y grid
+            </summary>
+        </member>
+        <member name="P:NextGenLab.Chart.ChartData.AxisTypeX">
+            <summary>
+            Defines LOG or LIN for X axis
+            </summary>
+        </member>
+        <member name="P:NextGenLab.Chart.ChartData.AxisTypeY">
+            <summary>
+            Defines LOG or LIN for Y axis
+            </summary>
+        </member>
+        <member name="P:NextGenLab.Chart.ChartData.Title">
+            <summary>
+            Title for plot
+            </summary>
+        </member>
+        <member name="P:NextGenLab.Chart.ChartData.TitleX">
+            <summary>
+            Titles for X axis
+            </summary>
+        </member>
+        <member name="P:NextGenLab.Chart.ChartData.TitlesY">
+            <summary>
+            Titles for Y legened
+            </summary>
+        </member>
+        <member name="P:NextGenLab.Chart.ChartData.AxisLabelX">
+            <summary>
+            Label for X axis
+            </summary>
+        </member>
+        <member name="P:NextGenLab.Chart.ChartData.AxisLabelY">
+            <summary>
+            Label for Y axis
+            </summary>
+        </member>
+        <member name="P:NextGenLab.Chart.ChartData.ChartType">
+            <summary>
+            Type of Chart to draw
+            </summary>
+        </member>
+        <member name="P:NextGenLab.Chart.ChartData.Xmarkers">
+            <summary>
+            When markers are set the y values for this is extracted
+            </summary>
+        </member>
+        <member name="P:NextGenLab.Chart.ChartData.Ymarkers">
+            <summary>
+            When markers are set the x values for this is extracted
+            </summary>
+        </member>
+        <member name="P:NextGenLab.Chart.ChartData.ShowZero">
+            <summary>
+            Show y=0 zero line
+            </summary>
+        </member>
+        <member name="P:NextGenLab.Chart.ChartData.AutoScale">
+            <summary>
+            If true the axis are automatically scaled
+            </summary>
+        </member>
+        <member name="P:NextGenLab.Chart.ChartData.Width">
+            <summary>
+            Only used in webservice!!
+            </summary>
+        </member>
+        <member name="P:NextGenLab.Chart.ChartData.Height">
+            <summary>
+            Only used in webservice!!
+            </summary>
+        </member>
+        <member name="T:NextGenLab.Chart.ChartControl2">
+            <summary>
+            Summary description for Chart.
+            </summary>
+        </member>
+        <member name="M:NextGenLab.Chart.ChartControl2.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+        </member>
+        <member name="M:NextGenLab.Chart.ChartControl2.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="T:NextGenLab.Chart.DrawText">
+            <summary>
+            Decorate a Chart control with title and legends
+            </summary>
+        </member>
+        <member name="M:NextGenLab.Chart.DrawText.#ctor(NextGenLab.Chart.ChControl,NextGenLab.Chart.ChartData)">
+            <summary>
+            constructor
+            </summary>
+            <param name="cd">Chart Data</param>
+            <param name="cc">Chart Control</param>
+        </member>
+        <member name="M:NextGenLab.Chart.DrawText.OnPaint(System.Drawing.Graphics)">
+            <summary>
+            Paint me
+            </summary>
+            <param name="g"></param>
+        </member>
+        <member name="T:NextGenLab.Chart.DragDropControl">
+            <summary>
+            Summary description for ZoomControl.
+            </summary>
+        </member>
+        <member name="T:NextGenLab.Chart.ZoomControl">
+            <summary>
+            Summary description for ZoomControl.
+            </summary>
+        </member>
+        <member name="T:NextGenLab.Chart.XmlTranslator">
+            <summary>
+            Summary description for NglTranslator.
+            </summary>
+        </member>
+        <member name="F:NextGenLab.Chart.XmlTranslator.Widths">
+            <summary>
+            Heights from the prev conv
+            </summary>
+        </member>
+        <member name="F:NextGenLab.Chart.XmlTranslator.Heights">
+            <summary>
+            Widths from the prev conv
+            </summary>
+        </member>
+        <member name="M:NextGenLab.Chart.XmlTranslator.ReadXml(System.String)">
+            <summary>
+            Reads an old xml file and translates into Chart
+            </summary>
+            <param name="xml"></param>
+            <returns></returns>
+        </member>
+        <member name="M:NextGenLab.Chart.XmlTranslator.ReadXmlv1(System.String)">
+            <summary>
+            Reads Graph Xml from a string
+            </summary>
+            <param name="ResultXml">Graph Xml</param>
+            <returns>Array of GraphDTO objects</returns>
+        </member>
+        <member name="M:NextGenLab.Chart.XmlTranslator.WriteXmlv1(NextGenLab.Chart.ChartData[])">
+            <summary>
+            Writes Graph Xml
+            </summary>
+            <param name="Graphs">Array of GraphDTO objects</param>
+            <returns>Graph Xml</returns>
+        </member>
+        <member name="M:NextGenLab.Chart.XmlTranslator.ParseValueString(System.String)">
+            <summary>
+            Parses a comma separated values
+            </summary>
+            <example>
+            <code>
+            string s = "1.2,3.2,3.4";
+            double[] d = GraphDTO.ParseValueString(s);
+            //d = {1.2, 3.2, 3.4}
+            </code>
+            </example>
+            <param name="values">Comma separated values</param>
+            <returns>Values from string</returns>
+        </member>
+        <member name="M:NextGenLab.Chart.XmlTranslator.JoinValueArray(System.Double[])">
+            <summary>
+            Converts from a double array into comma separated values
+            </summary>
+            <example>
+            <code>
+            double[] d  = new double[]{1.2, 3.2, 3.4};
+            string s = GraphDTO.ParseValueString(s);
+            //s = "1.2,3.2,3.4";
+            </code>
+            </example>
+            <param name="values">Values to convert</param>
+            <returns></returns>
+        </member>
+        <member name="T:NextGenLab.Chart.ChartService">
+            <summary>
+            Webservice for Chart maker
+            </summary>
+        </member>
+        <member name="M:NextGenLab.Chart.ChartService.#ctor">
+            <summary>
+            Constructor
+            </summary>
+        </member>
+        <member name="M:NextGenLab.Chart.ChartService.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="M:NextGenLab.Chart.ChartService.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+        </member>
+        <member name="M:NextGenLab.Chart.ChartService.MakeChart(NextGenLab.Chart.ChartData,System.Int32,System.Int32)">
+            <summary>
+            Make Chart and return as image
+            </summary>
+            <param name="cd">Chart data</param>
+            <param name="Width">Width of image</param>
+            <param name="Height">Height of image</param>
+            <returns></returns>
+        </member>
+        <member name="M:NextGenLab.Chart.ChartService.MakeHtmlChart(NextGenLab.Chart.ChartData[],System.Int32,System.Int32,System.String)">
+            <summary>
+            Make Html file containing charts
+            </summary>
+            <param name="cds">ChartData</param>
+            <param name="Width">Width</param>
+            <param name="Height">Height</param>
+            <param name="Title">Title of Html</param>
+            <returns></returns>
+        </member>
+        <member name="M:NextGenLab.Chart.ChartService.MakeInnerHtmlChart(NextGenLab.Chart.ChartData[],System.Int32,System.Int32)">
+            <summary>
+            Make Insertable HTML chart
+            </summary>
+            <param name="cds">ChartData</param>
+            <param name="Width">Width</param>
+            <param name="Height">Height</param>
+            <returns></returns>
+        </member>
+        <member name="M:NextGenLab.Chart.ChartService.GetDefault">
+            <summary>
+            Gets default ChartData
+            </summary>
+            <returns>ChartData</returns>
+        </member>
+        <member name="M:NextGenLab.Chart.ChartService.GetFromXml(System.String)">
+            <summary>
+            Gets default ChartData
+            </summary>
+            <returns>ChartData</returns>
+        </member>
+        <member name="M:NextGenLab.Chart.ChartService.GetScaled(System.Double[],System.Double[][])">
+            <summary>
+            Get a scaled version of ChartData with the current x and y series
+            </summary>
+            <param name="x">xvalue series</param>
+            <param name="y">yvalues series</param>
+            <returns>ChartData</returns>
+        </member>
+        <member name="M:NextGenLab.Chart.ChartService.AddToDelete(System.String[])">
+            <summary>
+            Adds files to Session delete store
+            </summary>
+            <param name="s"></param>
+        </member>
+        <member name="M:NextGenLab.Chart.ChartService.DeleteSession(System.Web.SessionState.HttpSessionState)">
+            <summary>
+            Delete files in Session delete store
+            </summary>
+            <param name="MySession"></param>
+        </member>
+        <member name="T:NextGenLab.Chart.ChartNet">
+            <summary>
+            Summary description for ChartNet.
+            </summary>
+        </member>
+        <member name="T:NextGenLab.Chart.Properties.Resources">
+            <summary>
+              A strongly-typed resource class, for looking up localized strings, etc.
+            </summary>
+        </member>
+        <member name="P:NextGenLab.Chart.Properties.Resources.ResourceManager">
+            <summary>
+              Returns the cached ResourceManager instance used by this class.
+            </summary>
+        </member>
+        <member name="P:NextGenLab.Chart.Properties.Resources.Culture">
+            <summary>
+              Overrides the current thread's CurrentUICulture property for all
+              resource lookups using this strongly typed resource class.
+            </summary>
+        </member>
+        <member name="T:NextGenLab.Chart.MergeException">
+            <summary>
+            Summary description for MergeException.
+            </summary>
+        </member>
+        <member name="T:NextGenLab.Chart.FileTypes.FtHtml">
+            <summary>
+            Summary description for FtHtml.
+            </summary>
+        </member>
+        <member name="T:NextGenLab.Chart.AxisType">
+            <summary>
+            Defines the axis type 
+            </summary>
+        </member>
+        <member name="F:NextGenLab.Chart.AxisType.LIN">
+            <summary>
+            Linear axis
+            </summary>
+        </member>
+        <member name="F:NextGenLab.Chart.AxisType.LOG">
+            <summary>
+            Logarithmic axis
+            </summary>
+        </member>
+        <member name="T:NextGenLab.Chart.ChartType">
+            <summary>
+            Defines the Chart type
+            </summary>
+        </member>
+        <member name="F:NextGenLab.Chart.ChartType.Stem">
+            <summary>
+            Stem Chart
+            </summary>
+        </member>
+        <member name="F:NextGenLab.Chart.ChartType.Curve">
+            <summary>
+            Curve Chart
+            </summary>
+        </member>
+        <member name="F:NextGenLab.Chart.ChartType.Fast">
+            <summary>
+            Fast Curve Chart (does not do windowing)
+            </summary>
+        </member>
+        <member name="F:NextGenLab.Chart.ChartType.Histogram">
+            <summary>
+            Histogram
+            </summary>
+        </member>
+        <member name="F:NextGenLab.Chart.ChartType.Points">
+            <summary>
+            Draws Points
+            </summary>
+        </member>
+        <member name="T:NextGenLab.Chart.ChartTraceType">
+            <summary>
+            Trace type for Chart
+            </summary>
+        </member>
+        <member name="F:NextGenLab.Chart.ChartTraceType.Cross">
+            <summary>
+            Draw Cross at trace points
+            </summary>
+        </member>
+        <member name="F:NextGenLab.Chart.ChartTraceType.Lines">
+            <summary>
+            Draw Lines with center at trace points
+            </summary>
+        </member>
+        <member name="F:NextGenLab.Chart.ChartTraceType.Dot">
+            <summary>
+            Draw dot at trace points
+            </summary>
+        </member>
+        <member name="F:NextGenLab.Chart.ChartTraceType.Advanced">
+            <summary>
+            Draw cross at trace points + marker at axis
+            </summary>
+        </member>
+        <member name="T:NextGenLab.Chart.ChControlCollection">
+            <summary>
+            Chart Control collection
+            </summary>
+        </member>
+        <member name="M:NextGenLab.Chart.ChControlCollection.Add(NextGenLab.Chart.ChControl)">
+            <summary>
+            Add control to collection
+            </summary>
+            <param name="cc">Chart control</param>
+            <returns>index</returns>
+        </member>
+        <member name="P:NextGenLab.Chart.ChControlCollection.Item(System.Int32)">
+            <summary>
+            Accessor for ChControlCollection
+            </summary>
+        </member>
+        <member name="T:NextGenLab.Chart.ChartTypes.Step">
+            <summary>
+            Summary description for Step.
+            </summary>
+        </member>
+        <member name="M:NextGenLab.Chart.ChartTypes.Step.#ctor(System.Double[],System.Double[][],System.String[])">
+            <summary>
+            Constructor
+            </summary>
+            <param name="cd">Chart Data</param>
+        </member>
+        <member name="M:NextGenLab.Chart.ChartTypes.Step.OnPaint(System.Drawing.Graphics)">
+            <summary>
+            Paint me
+            </summary>
+            <param name="g"></param>
+        </member>
+        <member name="T:NextGenLab.Chart.ChartTypes.Histogram">
+            <summary>
+            Draw a Histogram
+            </summary>
+        </member>
+        <member name="M:NextGenLab.Chart.ChartTypes.Histogram.#ctor(System.Double[],System.Double[][],System.String[])">
+            <summary>
+            Constructor
+            </summary>
+            <param name="cd">Chart Data</param>
+        </member>
+        <member name="M:NextGenLab.Chart.ChartTypes.Histogram.OnPaint(System.Drawing.Graphics)">
+            <summary>
+            Paint me
+            </summary>
+            <param name="g"></param>
+        </member>
+        <member name="T:NextGenLab.Chart.ChartTypes.FastCurve">
+            <summary>
+            Draw fast curve. Can't do windowing
+            </summary>
+        </member>
+        <member name="M:NextGenLab.Chart.ChartTypes.FastCurve.#ctor(System.Double[],System.Double[][],System.String[])">
+            <summary>
+            Constructor
+            </summary>
+            <param name="cd">Chart Data</param>
+        </member>
+        <member name="M:NextGenLab.Chart.ChartTypes.FastCurve.OnPaint(System.Drawing.Graphics)">
+            <summary>
+            Paint me
+            </summary>
+            <param name="g"></param>
+        </member>
+        <member name="T:NextGenLab.Chart.ChartDataList">
+            <summary>
+            Summary description for ChartDataList.
+            </summary>
+        </member>
+        <member name="T:NextGenLab.Chart.FFT">
+            <summary>
+            Summary description for FFT.
+            </summary>
+        </member>
+        <member name="T:NextGenLab.Chart.DecorateChControlBase">
+            <summary>
+            Decorator for Chart Controls
+            </summary>
+        </member>
+        <member name="M:NextGenLab.Chart.DecorateChControlBase.#ctor(NextGenLab.Chart.ChControl)">
+            <summary>
+            Constructor, adds prepaint handler to chart control and its children
+            </summary>
+            <param name="cc">Chart control</param>
+        </member>
+        <member name="M:NextGenLab.Chart.DecorateChControlBase.RecursiveSearch(NextGenLab.Chart.ChControlCollection)">
+            <summary>
+            Recursivly search through all children and add eventhandlers for PrePaint and PostPaint
+            </summary>
+            <param name="controls"></param>
+        </member>
+        <member name="M:NextGenLab.Chart.DecorateChControlBase.OnPrePaint(NextGenLab.Chart.ChControl,System.Drawing.Graphics)">
+            <summary>
+            Called before the control is drawn
+            </summary>
+            <param name="cc">Chart Control</param>
+            <param name="g">Graphics</param>
+        </member>
+        <member name="M:NextGenLab.Chart.DecorateChControlBase.OnPostPaint(NextGenLab.Chart.ChControl,System.Drawing.Graphics)">
+            <summary>
+            Called after the control has been drawn
+            </summary>
+            <param name="cc">Chart Control</param>
+            <param name="g">Graphic g</param>
+        </member>
+        <member name="T:NextGenLab.Chart.MouseMarkerControl">
+            <summary>
+            Summary description for MouseMarker.
+            </summary>
+        </member>
+        <member name="M:NextGenLab.Chart.MouseMarkerControl.#ctor">
+            <summary>
+            Constructor
+            </summary>
+        </member>
+        <member name="M:NextGenLab.Chart.MouseMarkerControl.OnMouseMove(System.Windows.Forms.MouseEventArgs)">
+            <summary>
+            Record mouse position
+            </summary>
+            <param name="e"></param>
+        </member>
+        <member name="M:NextGenLab.Chart.MouseMarkerControl.OnPaint(System.Windows.Forms.PaintEventArgs)">
+            <summary>
+            PaintMe
+            </summary>
+            <param name="e"></param>
+        </member>
+        <member name="P:NextGenLab.Chart.MouseMarkerControl.TraceType">
+            <summary>
+            Trace type for Chart
+            </summary>
+        </member>
+        <member name="P:NextGenLab.Chart.MouseMarkerControl.PickPoints">
+            <summary>
+            Do Trace ?
+            </summary>
+        </member>
+        <member name="P:NextGenLab.Chart.MouseMarkerControl.TraceValues">
+            <summary>
+            Show Trace Values
+            </summary>
+        </member>
+        <member name="E:NextGenLab.Chart.MouseMarkerControl.NewMarker">
+            <summary>
+            Called when a marker is ste
+            </summary>
+        </member>
+        <member name="T:NextGenLab.Chart.MouseMarkerControl.NewMarkerHandler">
+            <summary>
+            Handler for new marker point
+            </summary>
+        </member>
+        <member name="T:NextGenLab.Chart.AxisData">
+            <summary>
+            Max, min and step values for defining window grid
+            </summary>
+        </member>
+        <member name="M:NextGenLab.Chart.AxisData.#ctor(System.Double,System.Double,System.Double)">
+            <summary>
+            .constructor
+            </summary>
+            <param name="Min">Minimum grid value</param>
+            <param name="Max">Maximum grid value</param>
+            <param name="Step">Step value</param>
+        </member>
+        <member name="P:NextGenLab.Chart.AxisData.Max">
+            <summary>
+            Max value for axis
+            </summary>
+        </member>
+        <member name="P:NextGenLab.Chart.AxisData.Min">
+            <summary>
+            Min value for axis
+            </summary>
+        </member>
+        <member name="P:NextGenLab.Chart.AxisData.Step">
+            <summary>
+            Step value
+            </summary>
+        </member>
+        <member name="F:NextGenLab.Chart.ThemeGenerator.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:NextGenLab.Chart.ThemeGenerator.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:NextGenLab.Chart.ThemeGenerator.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="T:NextGenLab.Chart.DrawGridAxis">
+            <summary>
+            Decorate a grid with Axis values
+            </summary>
+        </member>
+        <member name="M:NextGenLab.Chart.DrawGridAxis.#ctor(NextGenLab.Chart.DrawGrid)">
+            <summary>
+            constructor
+            </summary>
+            <param name="gr">DrawGrid control to decorate</param>
+        </member>
+        <member name="M:NextGenLab.Chart.DrawGridAxis.OnPaint(System.Drawing.Graphics)">
+            <summary>
+            Paint me
+            </summary>
+            <param name="g"></param>
+        </member>
+        <member name="T:NextGenLab.Chart.ChartTypes.Stem">
+            <summary>
+            Stem Chart
+            </summary>
+        </member>
+        <member name="M:NextGenLab.Chart.ChartTypes.Stem.#ctor(System.Double[],System.Double[][],System.String[])">
+            <summary>
+            Constructor
+            </summary>
+            <param name="cd">Chart Data</param>
+        </member>
+        <member name="M:NextGenLab.Chart.ChartTypes.Stem.OnPaint(System.Drawing.Graphics)">
+            <summary>
+            Paint me
+            </summary>
+            <param name="g"></param>
+        </member>
+        <member name="T:NextGenLab.Chart.ChartNetClient">
+            <summary>
+            Summary description for ChartNetClient.
+            </summary>
+        </member>
+        <member name="T:NextGenLab.Chart.ChartTypes.CurveWide">
+            <summary>
+            Draw a curve
+            </summary>
+        </member>
+        <member name="T:NextGenLab.Chart.ChartTypes.Curve">
+            <summary>
+            Draw a curve
+            </summary>
+        </member>
+        <member name="F:NextGenLab.Chart.ChartTypes.Curve.pen_width">
+            <summary>
+            Constructor
+            </summary>
+            <param name="cd">Chart Data</param>
+        </member>
+        <member name="M:NextGenLab.Chart.ChartTypes.Curve.OnPaint(System.Drawing.Graphics)">
+            <summary>
+            Paints the control
+            </summary>
+            <param name="g"></param>
+        </member>
+        <member name="M:NextGenLab.Chart.ChartTypes.CurveWide.#ctor(System.Double[],System.Double[][],System.String[])">
+            <summary>
+            Constructor
+            </summary>
+            <param name="cd">Chart Data</param>
+        </member>
+        <member name="T:NextGenLab.Chart.ChartPrint">
+            <summary>
+            Summary description for ChartPrint.
+            </summary>
+        </member>
+        <member name="T:NextGenLab.Chart.Chart">
+            <summary>
+            Summary description for Chart.
+            </summary>
+        </member>
+        <member name="M:NextGenLab.Chart.Chart.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+        </member>
+        <member name="M:NextGenLab.Chart.Chart.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="T:NextGenLab.Chart.DrawLegend">
+            <summary>
+            Y Legend
+            </summary>
+        </member>
+        <member name="M:NextGenLab.Chart.DrawLegend.#ctor">
+            <summary>
+            Constructor
+            </summary>
+            <param name="Labels">Y Labels</param>
+        </member>
+        <member name="M:NextGenLab.Chart.DrawLegend.OnPaint(System.Drawing.Graphics)">
+            <summary>
+            Paint me
+            </summary>
+            <param name="g"></param>
+        </member>
+        <member name="M:NextGenLab.Chart.DrawLegend.MeasureContent(System.Drawing.Graphics)">
+            <summary>
+            Measure the size of this legend
+            </summary>
+            <param name="g">Graphics to paint on</param>
+        </member>
+        <member name="T:NextGenLab.Chart.DecorateSkin">
+            <summary>
+            Decorates chart controls in a chart with funstuff
+            </summary>
+        </member>
+        <member name="M:NextGenLab.Chart.DecorateSkin.#ctor(NextGenLab.Chart.ChControl,System.Drawing.Color,System.Drawing.Color,System.Drawing.Font)">
+            <summary>
+            constructor, calls base constructor
+            </summary>
+            <param name="cc">Chart control</param>
+            <param name="ForeColor">Foreground color</param>
+            <param name="BackColor">Background color</param>
+            <param name="Font">Font</param>
+        </member>
+        <member name="M:NextGenLab.Chart.DecorateSkin.OnPrePaint(NextGenLab.Chart.ChControl,System.Drawing.Graphics)">
+            <summary>
+            Decorates the chart control
+            </summary>
+            <param name="cc">chart control</param>
+            <param name="g">Graphics</param>
+        </member>
+        <member name="T:NglChart.ChartNetServer">
+            <summary>
+            Summary description for OpenServer.
+            </summary>
+        </member>
+    </members>
+</doc>

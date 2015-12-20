@@ -1,0 +1,6 @@
+- Vis 1 ylabel hvis bare ett plot
+- Saving av multipple ChartData
+- Printing
+
+
+

@@ -1,0 +1,38 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.24720.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RsScopeFFT", "RsScopeFFTs\RsScopeFFT\RsScopeFFT.csproj", "{E90BBCC8-564A-4178-AE1E-98F4588A52CC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NextGenLab.Chart", "NextGenLab.Chart\NextGenLab.Chart\NextGenLab.Chart.csproj", "{ADCA3EFF-085B-4132-BF39-22448A2F4B13}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Ngl.Release|Any CPU = Ngl.Release|Any CPU
+		Release|Any CPU = Release|Any CPU
+		Sdn.Release|Any CPU = Sdn.Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E90BBCC8-564A-4178-AE1E-98F4588A52CC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E90BBCC8-564A-4178-AE1E-98F4588A52CC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E90BBCC8-564A-4178-AE1E-98F4588A52CC}.Ngl.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E90BBCC8-564A-4178-AE1E-98F4588A52CC}.Ngl.Release|Any CPU.Build.0 = Release|Any CPU
+		{E90BBCC8-564A-4178-AE1E-98F4588A52CC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E90BBCC8-564A-4178-AE1E-98F4588A52CC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E90BBCC8-564A-4178-AE1E-98F4588A52CC}.Sdn.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E90BBCC8-564A-4178-AE1E-98F4588A52CC}.Sdn.Release|Any CPU.Build.0 = Release|Any CPU
+		{ADCA3EFF-085B-4132-BF39-22448A2F4B13}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ADCA3EFF-085B-4132-BF39-22448A2F4B13}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ADCA3EFF-085B-4132-BF39-22448A2F4B13}.Ngl.Release|Any CPU.ActiveCfg = Ngl.Release|Any CPU
+		{ADCA3EFF-085B-4132-BF39-22448A2F4B13}.Ngl.Release|Any CPU.Build.0 = Ngl.Release|Any CPU
+		{ADCA3EFF-085B-4132-BF39-22448A2F4B13}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ADCA3EFF-085B-4132-BF39-22448A2F4B13}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ADCA3EFF-085B-4132-BF39-22448A2F4B13}.Sdn.Release|Any CPU.ActiveCfg = Sdn.Release|Any CPU
+		{ADCA3EFF-085B-4132-BF39-22448A2F4B13}.Sdn.Release|Any CPU.Build.0 = Sdn.Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
