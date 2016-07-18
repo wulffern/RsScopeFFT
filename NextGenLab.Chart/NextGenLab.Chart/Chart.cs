@@ -104,13 +104,21 @@ namespace NextGenLab.Chart
         private ToolStripSeparator toolStripSeparator2;
         private ToolStripButton toolStripButton1;
         private ToolStripButton toolStripButton2;
-        private ToolStripButton tReadCont;
+        private ToolStripButton tSetOversample;
         private ToolStripLabel toolStripLabel1;
         private ToolStripTextBox toolStripTextBox1;
         private ToolStripLabel toolStripLabel2;
         private ToolStripTextBox toolStripTextBox2;
         private IContainer components;
-        double fs_scope = 64;
+        double fs_scope = 16;
+        private ToolStripTextBox textBoxADC;
+        private ToolStripLabel toolStripLabel3;
+        private ToolStripTextBox textBoxIDDA;
+        private ToolStripLabel toolStripLabel4;
+        private ToolStripTextBox textBoxText;
+        private ToolStripLabel toolStripLabel5;
+        private ToolStripButton tReadCont;
+        private ToolStripButton tSupplyLow;
         double pow_scope = 16;
 
         public Chart()
@@ -223,10 +231,18 @@ namespace NextGenLab.Chart
             this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
             this.toolStripButton2 = new System.Windows.Forms.ToolStripButton();
             this.tReadCont = new System.Windows.Forms.ToolStripButton();
-            this.toolStripTextBox1 = new System.Windows.Forms.ToolStripTextBox();
             this.toolStripLabel1 = new System.Windows.Forms.ToolStripLabel();
+            this.toolStripTextBox1 = new System.Windows.Forms.ToolStripTextBox();
             this.toolStripLabel2 = new System.Windows.Forms.ToolStripLabel();
             this.toolStripTextBox2 = new System.Windows.Forms.ToolStripTextBox();
+            this.textBoxText = new System.Windows.Forms.ToolStripTextBox();
+            this.toolStripLabel5 = new System.Windows.Forms.ToolStripLabel();
+            this.textBoxIDDA = new System.Windows.Forms.ToolStripTextBox();
+            this.toolStripLabel4 = new System.Windows.Forms.ToolStripLabel();
+            this.textBoxADC = new System.Windows.Forms.ToolStripTextBox();
+            this.toolStripLabel3 = new System.Windows.Forms.ToolStripLabel();
+            this.tSetOversample = new System.Windows.Forms.ToolStripButton();
+            this.tSupplyLow = new System.Windows.Forms.ToolStripButton();
             this.menuStrip1.SuspendLayout();
             this.toolStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -581,7 +597,15 @@ namespace NextGenLab.Chart
             this.toolStripLabel1,
             this.toolStripTextBox1,
             this.toolStripLabel2,
-            this.toolStripTextBox2});
+            this.toolStripTextBox2,
+            this.textBoxText,
+            this.toolStripLabel5,
+            this.textBoxIDDA,
+            this.toolStripLabel4,
+            this.textBoxADC,
+            this.toolStripLabel3,
+            this.tSetOversample,
+            this.tSupplyLow});
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
             this.toolStrip1.Size = new System.Drawing.Size(828, 25);
@@ -829,18 +853,18 @@ namespace NextGenLab.Chart
             this.tReadCont.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.tReadCont.Click += new System.EventHandler(this.tReadCont_Click);
             // 
-            // toolStripTextBox1
-            // 
-            this.toolStripTextBox1.Name = "toolStripTextBox1";
-            this.toolStripTextBox1.Size = new System.Drawing.Size(50, 25);
-            this.toolStripTextBox1.Text = "64";
-            this.toolStripTextBox1.TextChanged += new System.EventHandler(this.toolStripTextBox1_TextChanged);
-            // 
             // toolStripLabel1
             // 
             this.toolStripLabel1.Name = "toolStripLabel1";
             this.toolStripLabel1.Size = new System.Drawing.Size(22, 22);
             this.toolStripLabel1.Text = "FS:";
+            // 
+            // toolStripTextBox1
+            // 
+            this.toolStripTextBox1.Name = "toolStripTextBox1";
+            this.toolStripTextBox1.Size = new System.Drawing.Size(30, 25);
+            this.toolStripTextBox1.Text = "16";
+            this.toolStripTextBox1.TextChanged += new System.EventHandler(this.toolStripTextBox1_TextChanged);
             // 
             // toolStripLabel2
             // 
@@ -851,9 +875,69 @@ namespace NextGenLab.Chart
             // toolStripTextBox2
             // 
             this.toolStripTextBox2.Name = "toolStripTextBox2";
-            this.toolStripTextBox2.Size = new System.Drawing.Size(50, 25);
+            this.toolStripTextBox2.Size = new System.Drawing.Size(30, 25);
             this.toolStripTextBox2.Text = "16";
             this.toolStripTextBox2.TextChanged += new System.EventHandler(this.toolStripTextBox2_TextChanged);
+            // 
+            // textBoxText
+            // 
+            this.textBoxText.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
+            this.textBoxText.Name = "textBoxText";
+            this.textBoxText.Size = new System.Drawing.Size(100, 25);
+            // 
+            // toolStripLabel5
+            // 
+            this.toolStripLabel5.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
+            this.toolStripLabel5.Name = "toolStripLabel5";
+            this.toolStripLabel5.Size = new System.Drawing.Size(28, 22);
+            this.toolStripLabel5.Text = "TXT";
+            // 
+            // textBoxIDDA
+            // 
+            this.textBoxIDDA.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
+            this.textBoxIDDA.Name = "textBoxIDDA";
+            this.textBoxIDDA.Size = new System.Drawing.Size(30, 25);
+            this.textBoxIDDA.Text = "18";
+            // 
+            // toolStripLabel4
+            // 
+            this.toolStripLabel4.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
+            this.toolStripLabel4.Name = "toolStripLabel4";
+            this.toolStripLabel4.Size = new System.Drawing.Size(34, 22);
+            this.toolStripLabel4.Text = "IDDA";
+            // 
+            // textBoxADC
+            // 
+            this.textBoxADC.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
+            this.textBoxADC.Name = "textBoxADC";
+            this.textBoxADC.Size = new System.Drawing.Size(20, 25);
+            this.textBoxADC.Text = "6";
+            // 
+            // toolStripLabel3
+            // 
+            this.toolStripLabel3.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
+            this.toolStripLabel3.Name = "toolStripLabel3";
+            this.toolStripLabel3.Size = new System.Drawing.Size(31, 22);
+            this.toolStripLabel3.Text = "ADC";
+            // 
+            // tSetOversample
+            // 
+            this.tSetOversample.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this.tSetOversample.Image = ((System.Drawing.Image)(resources.GetObject("tSetOversample.Image")));
+            this.tSetOversample.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tSetOversample.Name = "tSetOversample";
+            this.tSetOversample.Size = new System.Drawing.Size(39, 22);
+            this.tSetOversample.Text = "OSR1";
+            this.tSetOversample.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.tSetOversample.Click += new System.EventHandler(this.tSetOversampleClick);
+            // 
+            // tSupplyLow
+            // 
+            this.tSupplyLow.BackColor = System.Drawing.Color.Green;
+            this.tSupplyLow.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.tSupplyLow.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tSupplyLow.Name = "tSupplyLow";
+            this.tSupplyLow.Size = new System.Drawing.Size(23, 22);
             // 
             // Chart
             // 
@@ -885,11 +969,14 @@ namespace NextGenLab.Chart
         MenuItem miTraceType;
         Markers markers;
         ChartPrint cp;
+        double osr = 1;
         FFTDialog fftdialog;
         FormAdjAxis fad;
         Form f;
         RsReadFFT rs;
         Thread playThread;
+        string savePath;
+
 
         public delegate void OpenChartData(ChartData cd);
 
@@ -899,7 +986,7 @@ namespace NextGenLab.Chart
 
         private void Initialize()
         {
-
+            osr = 1;
 
             openChart += Chart_openChart;
             //Init original ChartData
@@ -921,7 +1008,10 @@ namespace NextGenLab.Chart
             this.mouseMarkerControl1.DragDrop += new DragEventHandler(mouseMarkerControl1_DragDrop);
             this.mouseMarkerControl1.DragEnter += delegate(object sender, DragEventArgs e) { e.Effect = DragDropEffects.All; };
 
-            rs = new RsReadFFT("TCPIP::129.241.3.92::hislip0::INSTR");
+
+            //initialize instrument connection and storage
+            rs = new RsReadFFT("TCPIP::129.241.3.33::hislip0::INSTR");
+            savePath = @"C:\cawu\measurements\river_mpw1\data\" + DateTime.Now.Year + "-" + DateTime.Now.Month + "-" + DateTime.Now.Day;
 
 
             //Initialize printer
@@ -1463,41 +1553,28 @@ Copyright Carsten Wulff 2004
 
         }
 
+
+        bool saveData = false;
+
         private void toolStripButton2_Click(object sender, EventArgs e)
         {
             
 
             isPlay = false;
+            saveData = true;
             playThread = new Thread(new ThreadStart(RunThread));
             playThread.Start();
             
+           
           
         }
 
         bool isPlay = false;
         int count = 0;
-        private void tReadCont_Click(object sender, EventArgs e)
-        {
-            if (isPlay)
-            {
-                this.tReadCont.Text = "Play";
-                isPlay = false;
-                
-            }
-            else
-            {
-                this.tReadCont.Text = "Pause";
-                isPlay = true;
-                playThread = new Thread(new ThreadStart(RunThread));
-                playThread.Start();
-            }
-           
-           
-        }
 
         private void Chart_openChart(ChartData cd)
         {
-            cd.Title = cd.Title + ", N=" + cd.X.Length  + "  (" + count.ToString() + ")";
+            cd.Title = cd.Title + ", N=" + cd.X.Length*2  + "  (" + count.ToString() + ")";
             count++;
             this.Open(cd, false);
         }
@@ -1517,15 +1594,41 @@ Copyright Carsten Wulff 2004
 
         }
 
+        private void setColorRed()
+        {
+            tSupplyLow.BackColor = Color.Red;
+
+        }
+
+        private void setColorGreen()
+        {
+
+            tSupplyLow.BackColor = Color.Green;
+        }
+
         private ChartData RunFFT()
         {
 
-           
 
-            ChartData cd = rs.CaptureFFT(fs_scope,pow_scope);
+            string filename = "adc" + textBoxADC.Text + "_" + fs_scope + "MHz_" + textBoxIDDA.Text + "uA_" + textBoxText.Text + "_"  + DateTime.Now.Hour + "_" + DateTime.Now.Minute+ "_"+ DateTime.Now.Second + ".dat";
+
+            ChartData cd = rs.CaptureFFT(fs_scope,pow_scope,savePath,filename,saveData,osr);
             cd.AutoScale = false;
 
-            cd.Title = "SNDR=" + rs.sndr.ToString("f2") + "dB, SNR=" + rs.snr.ToString("f2") + "dB, ENOB=" + rs.enob.ToString("f2") + "bit";
+            if (rs.supplyLow)
+            {
+                this.Invoke(new EmptyHandler(setColorRed));
+
+            }
+            else
+            {
+                this.Invoke(new EmptyHandler(setColorGreen));
+            }
+           
+            cd.Title = "SNDR=" + rs.sndr.ToString("f2") + "dB, SNR=" + rs.snr.ToString("f2") + "dB, ENOB=" + rs.enob.ToString("f2") + "bit A="  + rs.amp.ToString() + " Max=" + rs.max.ToString() + " Min=" + rs.min.ToString()  + " Mean=" + rs.mean.ToString("F2") + " Sigma=" + rs.sigma.ToString("F2");
+
+            saveData = false;
+
             return cd;
             
         }
@@ -1535,12 +1638,12 @@ Copyright Carsten Wulff 2004
         private void toolStripTextBox1_TextChanged(object sender, EventArgs e)
         {
 
-            if (this.toolStripTextBox1.Text.Length < 2)
+                if (this.toolStripTextBox1.Text.Length < 1)
             {
                 return;
             }
             double fs_scope = Convert.ToDouble(this.toolStripTextBox1.Text);
-            if(fs_scope > 0.1)
+            if(fs_scope > 0.01)
             {
                 this.fs_scope = fs_scope;
             }
@@ -1553,10 +1656,61 @@ Copyright Carsten Wulff 2004
                 return;
             }
             double pow_scope = Convert.ToDouble(this.toolStripTextBox2.Text);
-            if (pow_scope > 8 && pow_scope < 22)
+            if (pow_scope > 8 && pow_scope < 24)
             {
                 this.pow_scope = pow_scope;
             }
         }
+
+
+        
+        private void tSetOversampleClick(object sender, EventArgs e)
+        {
+
+            if (osr == 1)
+            {
+                osr = 2;
+                this.tSetOversample.Text = "OSR2";
+
+            }else if (osr == 2)
+            {
+                osr = 8;
+                this.tSetOversample.Text = "OSR8";
+
+            }
+            else
+            {
+                osr = 1;
+                this.tSetOversample.Text = "OSR1";
+
+            }
+
+
+        }
+
+        private void tReadCont_t(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tReadCont_Click(object sender, EventArgs e)
+        {
+            if (isPlay)
+            {
+                this.tReadCont.Text = "Play";
+                isPlay = false;
+
+            }
+            else
+            {
+                this.tReadCont.Text = "Pause";
+                isPlay = true;
+                playThread = new Thread(new ThreadStart(RunThread));
+                playThread.Start();
+            }
+
+
+        }
+
     }
 }

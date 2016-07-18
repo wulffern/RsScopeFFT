@@ -849,7 +849,7 @@ Copyright NTNU 2004
 				vals = cd.Y;
 				for(int i=0;i<vals.Length;i++)
 				{
-					fft.PowerSpectralDensity(vals[i],out cdr,new Hanning(),1);
+					fft.PowerSpectralDensity(vals[i],out cdr,new Hanning(),1,1);
 					Chart c= new Chart();
                     if(cd.TitlesY.Length > i)
 					    cdr.Title = "fft(" + cd.TitlesY[i] + ")";

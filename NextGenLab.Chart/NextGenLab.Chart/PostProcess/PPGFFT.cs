@@ -32,7 +32,7 @@ namespace NextGenLab.Chart.PostProcess
                     double[] valscopy = new double[vals[i].Length];
                     Array.Copy(vals[i], valscopy, vals[i].Length);
 
-                    fft.PowerSpectralDensity(valscopy, out cdr, new Hanning(), 1);
+                    fft.PowerSpectralDensity(valscopy, out cdr, new Hanning(), 1,1);
                     if (cd.TitlesY.Length > i)
                         cdr.Title = "fft(" + cd.TitlesY[i] + ")";
                     cdr.TitleX = "frequency";

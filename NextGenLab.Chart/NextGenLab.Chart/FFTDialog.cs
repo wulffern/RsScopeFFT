@@ -271,7 +271,7 @@ namespace NextGenLab.Chart
 					y1 = y;
 				}
 
-				fft.PowerSpectralDensity(y1, out cdr, new Hanning(),1);
+				fft.PowerSpectralDensity(y1, out cdr, new Hanning(),1,1);
 				Chart c = new Chart();
 				cdr.Title = "fft(" + cd.name + ")";
 				cdr.TitleX = "frequency";

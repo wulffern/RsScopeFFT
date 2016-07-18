@@ -137,16 +137,16 @@ namespace NextGenLab.Chart
             return DoFFT(dd,window);
         }
 
-        public void PowerSpectralDensity(double[] d, out ChartData cd, WindowBase window, double fs)
+        public void PowerSpectralDensity(double[] d, out ChartData cd, WindowBase window, double fs,double osr)
         {
-            PowerSpectralDensity(d, out cd, window, fs, double.NaN);
+            PowerSpectralDensity(d, out cd, window, fs, double.NaN,osr);
            
         }
 
-        public void PowerSpectralDensity(double[] d, out ChartData cd, WindowBase window, double fs,double maxSignalAmplitude)
+        public void PowerSpectralDensity(double[] d, out ChartData cd, WindowBase window, double fs,double maxSignalAmplitude,double osr)
         {
             int M = d.Length;
-            double[] y = PowerSpectralDensity(d, window, fs,maxSignalAmplitude);
+            double[] y = PowerSpectralDensity(d, window, fs,maxSignalAmplitude,osr);
 
             double[] freq = new double[y.Length];
             for (int i = 0; i < freq.Length; i++)
@@ -171,13 +171,13 @@ namespace NextGenLab.Chart
 
         }
 
-        public double[] PowerSpectralDensity(double[] d, WindowBase window, double fs)
+        public double[] PowerSpectralDensity(double[] d, WindowBase window, double fs,double osr)
         {
          
-            return PowerSpectralDensity(d,window,fs,double.NaN);
+            return PowerSpectralDensity(d,window,fs,double.NaN, osr);
         }
 
-        public double[] PowerSpectralDensity(double[] d, WindowBase window, double fs,double maxSignalAmpl )
+        public double[] PowerSpectralDensity(double[] d, WindowBase window, double fs,double maxSignalAmpl,double osr )
         {
             Complex[] spec = DoFFT(d, window);
 
@@ -192,14 +192,22 @@ namespace NextGenLab.Chart
                     maxindex = i;
                 }
             }
-
+         
             double fs1 = fs;
             double f0 = maxindex / d.Length*fs1;
             double fmin = 1 / maxindex*fs1;
-            this.snr = SignalNoise(spec, d.Length, fs1, f0, 6, 20, fmin, fs1/2);
-            this.sndr = SignalNoise(spec, d.Length, fs1, f0, 0, 20, fmin, fs1/2);
+            try { 
+            this.snr = SignalNoise(spec, d.Length, fs1, f0, 6, 10, fmin, fs1/(2*osr));
+            this.sndr = SignalNoise(spec, d.Length, fs1, f0, 0, 10, fmin, fs1/(2*osr));
             this.enob = (sndr - 1.76) / 6.02;
+            }
+            catch
+            {
 
+                this.sndr = 0;
+                this.enob = 0;
+                this.snr = 0;
+            }
 
            if (double.NaN.CompareTo(maxSignalAmpl) == 0)
             {
@@ -282,6 +290,7 @@ namespace NextGenLab.Chart
         {
  
             int M = samples;
+            int osr = 8;
 
             
             //Find signal index
