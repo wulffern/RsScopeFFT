@@ -119,6 +119,8 @@ namespace NextGenLab.Chart
         private ToolStripLabel toolStripLabel5;
         private ToolStripButton tReadCont;
         private ToolStripButton tSupplyLow;
+        private ToolStripLabel toolStripLabel6;
+        private ToolStripTextBox tbMSB;
         double pow_scope = 16;
 
         public Chart()
@@ -243,6 +245,8 @@ namespace NextGenLab.Chart
             this.toolStripLabel3 = new System.Windows.Forms.ToolStripLabel();
             this.tSetOversample = new System.Windows.Forms.ToolStripButton();
             this.tSupplyLow = new System.Windows.Forms.ToolStripButton();
+            this.toolStripLabel6 = new System.Windows.Forms.ToolStripLabel();
+            this.tbMSB = new System.Windows.Forms.ToolStripTextBox();
             this.menuStrip1.SuspendLayout();
             this.toolStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -605,7 +609,9 @@ namespace NextGenLab.Chart
             this.textBoxADC,
             this.toolStripLabel3,
             this.tSetOversample,
-            this.tSupplyLow});
+            this.tSupplyLow,
+            this.toolStripLabel6,
+            this.tbMSB});
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
             this.toolStrip1.Size = new System.Drawing.Size(828, 25);
@@ -883,7 +889,7 @@ namespace NextGenLab.Chart
             // 
             this.textBoxText.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
             this.textBoxText.Name = "textBoxText";
-            this.textBoxText.Size = new System.Drawing.Size(100, 25);
+            this.textBoxText.Size = new System.Drawing.Size(50, 25);
             // 
             // toolStripLabel5
             // 
@@ -938,6 +944,19 @@ namespace NextGenLab.Chart
             this.tSupplyLow.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tSupplyLow.Name = "tSupplyLow";
             this.tSupplyLow.Size = new System.Drawing.Size(23, 22);
+            // 
+            // toolStripLabel6
+            // 
+            this.toolStripLabel6.Name = "toolStripLabel6";
+            this.toolStripLabel6.Size = new System.Drawing.Size(40, 22);
+            this.toolStripLabel6.Text = "CalVal";
+            // 
+            // tbMSB
+            // 
+            this.tbMSB.Name = "tbMSB";
+            this.tbMSB.Size = new System.Drawing.Size(100, 25);
+            this.tbMSB.Text = "0,0,0";
+            this.tbMSB.Click += new System.EventHandler(this.tbMSB_Click);
             // 
             // Chart
             // 
@@ -1010,8 +1029,9 @@ namespace NextGenLab.Chart
 
 
             //initialize instrument connection and storage
-            rs = new RsReadFFT("TCPIP::129.241.3.33::hislip0::INSTR");
-            savePath = @"C:\cawu\measurements\river_mpw1\data\" + DateTime.Now.Year + "-" + DateTime.Now.Month + "-" + DateTime.Now.Day;
+            //rs = new RsReadFFT("TCPIP::129.241.3.121::hislip0::INSTR");
+            rs = new RsReadFFT("TCPIP::129.241.3.145::HISLIP");
+            savePath = @"C:\cawu\measurements\river_mpw2\data\" + DateTime.Now.Year + "-" + DateTime.Now.Month + "-" + DateTime.Now.Day;
 
 
             //Initialize printer
@@ -1612,13 +1632,28 @@ Copyright Carsten Wulff 2004
 
             string filename = "adc" + textBoxADC.Text + "_" + fs_scope + "MHz_" + textBoxIDDA.Text + "uA_" + textBoxText.Text + "_"  + DateTime.Now.Hour + "_" + DateTime.Now.Minute+ "_"+ DateTime.Now.Second + ".dat";
 
+            string[] arr = tbMSB.Text.Split(',');
+            if (arr.Length > 0)
+            {
+                rs.calval_msb = Convert.ToDouble(arr[0]);
+            }
+            if (arr.Length > 1)
+            {
+                rs.calval_msb1 = Convert.ToDouble(arr[1]);
+            }
+            if (arr.Length > 2)
+            {
+                    rs.calval_msb2 = Convert.ToDouble(arr[2]);
+            }
+
+
             ChartData cd = rs.CaptureFFT(fs_scope,pow_scope,savePath,filename,saveData,osr);
             cd.AutoScale = false;
 
             if (rs.supplyLow)
             {
                 this.Invoke(new EmptyHandler(setColorRed));
-
+                
             }
             else
             {
@@ -1674,6 +1709,12 @@ Copyright Carsten Wulff 2004
 
             }else if (osr == 2)
             {
+                osr = 4;
+                this.tSetOversample.Text = "OSR4";
+
+            
+            }else if (osr == 4)
+            {
                 osr = 8;
                 this.tSetOversample.Text = "OSR8";
 
@@ -1712,5 +1753,13 @@ Copyright Carsten Wulff 2004
 
         }
 
+        private void tbMSB_Click(object sender, EventArgs e)
+        {
+            
+                
+               
+
+            
+        }
     }
 }

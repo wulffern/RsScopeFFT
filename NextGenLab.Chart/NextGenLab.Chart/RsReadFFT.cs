@@ -23,19 +23,28 @@ namespace NextGenLab.Chart
         public double mean;
         public double sigma;
         public bool supplyLow;
-  
+        public double calval_msb;
+        public double calval_msb1;
+        public double calval_msb2;
+
+
+
         public RsReadFFT(string connection)
         {
             sndr = 0;
             snr = 0;
             enob = 0;
             supplyLow = false;
+            calval_msb = 0;
+            calval_msb1 = 0;
+            calval_msb2 = 0;
             
 
             try
             {
                 if (driver == null)
                     driver = new RsScope(connection, true,false);
+               
             }
             catch (Exception ex)
             {
@@ -76,22 +85,24 @@ namespace NextGenLab.Chart
         {
 
             //driver.WaveformAcquisition.RunSingleWithoutWait();
-            //double fs = fs_scope * 1e6;
-            //if(fs < 10e6)
-            // {
+            double fs = fs_scope * 1e6*4;
+            if(fs < 10e6)
+             {
 
-            //      fs = 10e6;
-            //    }
-            //      driver.Acquisition.HorizontalSampleRate = fs;
-            // driver.Acquisition.  
-            //driver.Acquisition.HorizontalSampleRate = 1e6;
-            //driver.Acquisition.HorizontalSampleRate = 20e6;
-
-           //   driver.Acquisition.HorizontalSampleRate = 20e6;
+                  fs = 10e6;
+                }
+            //driver.Acquisition.HorizontalRecordLength = (int)Math.Pow(2, 10);
+            //driver.Acquisition.
+           // PrecisionTimeSpan p1 = PrecisionTimeSpan.FromSeconds(1e-6);
+           // driver.Acquisition.AcquisitionTime = 10/fs;
+           // driver.Acquisition.HorizontalTimePerRecord = p1;
+            driver.Acquisition.HorizontalSampleRate = fs;
+            
+            
             int length =(int)Math.Pow(2, pow_scope);
             double time = length/ fs_scope*1e-6;
 
-           PrecisionTimeSpan p = PrecisionTimeSpan.FromSeconds(time);
+            PrecisionTimeSpan p = PrecisionTimeSpan.FromSeconds(time);
             driver.Acquisition.HorizontalTimePerRecord = p;
             //driver.Acquisition.HorizontalRecordLength = (int)Math.Pow(2, 16);
 
@@ -114,6 +125,7 @@ namespace NextGenLab.Chart
 
 
             //driver.MixedSignalOption.DecodeResults.ReadSignals(0, maximumTime, out b0);
+           
             driver.MixedSignalOption.DecodeResults.ReadSignals(1, maximumTime, out b1);
             driver.MixedSignalOption.DecodeResults.ReadSignals(2, maximumTime, out b2);
             driver.MixedSignalOption.DecodeResults.ReadSignals(3, maximumTime, out b3);
@@ -134,16 +146,19 @@ namespace NextGenLab.Chart
 
 
             double sum = 0;
+            double cal = 1;
 
+            double calres = 16;
             supplyLow = false;
           
             for (int i = 0; i < b15.Length; i++)
             {
                 if (b15[i] == true && sample)
                 {
-                    double d11 = b11[i] ? -2048 : 0;
-                    double d10 = b10[i] ? 1024 : 0;
-                    double d9 = b9[i] ? 512 : 0;
+                     double d11 = b11[i] ? -2048-calval_msb/calres*cal : 0+calval_msb / calres * cal;
+                     double d10 = b10[i] ? 1024  + calval_msb1 / calres * cal:  - calval_msb1 / calres * cal;
+                    double d9 = b9[i] ? 512+calval_msb2 / calres * cal : 0-calval_msb2 / calres * cal;
+                    
                     double d8 = b8[i] ? 256 : 0;
                     double d7 = b7[i] ? 128 : 0;
                     double d6 = b6[i] ? 64 : 0;
