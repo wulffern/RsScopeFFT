@@ -9,6 +9,7 @@ using System.Windows.Forms;
 using System.IO;
 
 
+
 namespace NextGenLab.Chart
 {
     class RsReadFFT

@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
-VisualStudioVersion = 14.0.24720.0
+VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RsScopeFFT", "RsScopeFFTs\RsScopeFFT\RsScopeFFT.csproj", "{E90BBCC8-564A-4178-AE1E-98F4588A52CC}"
 EndProject
@@ -12,10 +12,9 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		Performance1.psess = Performance1.psess
 	EndProjectSection
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "rscapture", "rscapture\rscapture.csproj", "{5A798938-4686-4429-8A66-FAD08F9BF841}"
+EndProject
 Global
-	GlobalSection(Performance) = preSolution
-		HasPerformanceSessions = true
-	EndGlobalSection
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Ngl.Release|Any CPU = Ngl.Release|Any CPU
@@ -39,6 +38,14 @@ Global
 		{ADCA3EFF-085B-4132-BF39-22448A2F4B13}.Release|Any CPU.Build.0 = Release|Any CPU
 		{ADCA3EFF-085B-4132-BF39-22448A2F4B13}.Sdn.Release|Any CPU.ActiveCfg = Sdn.Release|Any CPU
 		{ADCA3EFF-085B-4132-BF39-22448A2F4B13}.Sdn.Release|Any CPU.Build.0 = Sdn.Release|Any CPU
+		{5A798938-4686-4429-8A66-FAD08F9BF841}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5A798938-4686-4429-8A66-FAD08F9BF841}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5A798938-4686-4429-8A66-FAD08F9BF841}.Ngl.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5A798938-4686-4429-8A66-FAD08F9BF841}.Ngl.Release|Any CPU.Build.0 = Release|Any CPU
+		{5A798938-4686-4429-8A66-FAD08F9BF841}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5A798938-4686-4429-8A66-FAD08F9BF841}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5A798938-4686-4429-8A66-FAD08F9BF841}.Sdn.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5A798938-4686-4429-8A66-FAD08F9BF841}.Sdn.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
